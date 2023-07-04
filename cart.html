@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Cart</title>
+</head>
+<body>
+    <header class="header">
+        <div class="grid">
+            <div class="header-content">
+                <div class="header__icon">
+                    <img class="icon_shop" src="https://bizweb.dktcdn.net/100/401/951/themes/836238/assets/logo.png?1681532880531" alt="">
+
+                </div>
+                <nav class="nav">
+                    <a href="home.html" class="nav__item home ">
+                        HOME
+                    </a>
+                    <div class="nav__item">
+                        ABOUT
+                    </div>
+                    <a href="bill.html" class="nav__item">
+                        BILLS
+                    </a>
+                    <a href="cart.html" class="nav__item cart__shopping">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <div class="notice-cart">1</div>
+                    </a>
+
+                </nav>
+            </div>
+
+        </div>
+
+    </header>
+    <div class="main__shopping">
+        <img class="empty__cart" src="assets/img/empty-cart.png" alt="">
+        <div class="has__product">
+            <table class="product__incart">
+                <tr>
+                    <th>Picture</th>
+                    <th>Product name</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                    <th>Total</th>
+                    <th>Clear Cart</th>
+                </tr>
+                <tbody class="product__cart">
+                    <tr>
+                        
+                    </tr>
+                </tbody>
+            </table>
+            <div class="total">
+                Total:
+            </div>
+
+
+        </div>
+        <div class="home-and-buy">
+            <a href="home.html" class="home__back">
+                Home back
+            </a>
+            <div onclick="openModal()" class="buy">
+                Buy
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal__buy">
+        <div class="modal-content" id="form1">
+            <div class="header-modal">
+                Thông tin người mua
+                <i onclick="closeModal()" class="fa-solid fa-xmark cancle"></i>
+            </div>
+            <div class="body-modal">
+
+
+                <div class="form-group form-name">
+                    <label for="name">Họ và tên</label>
+                    <div class="input-name">
+                        <input class="input col-5" type="text" name="ho" id="ho" placeholder="Họ">
+                        <input class="input col-5" type="text" name="ten" id="ten" placeholder="Tên">
+                    </div>
+                    <span class="form-message" id="mes1"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input class="input" type="email" name="email" id="email" placeholder="Email">
+                    <span class="form-message" id="mes2"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Số điệm thoại</label>
+                    <input class="input" type="text" name="phone" id="phone" placeholder="Số điện thoại">
+                    <span class="form-message" id="mes3"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="Address">Địa chỉ</label>
+                    <div class="form-select">
+                        <select onchange="onChangeTinh(event)" id="tinh" class="form-control maxsize">
+                            <option value="">--Chọn tỉnh/Thành phố--</option>
+                        </select>
+                        <select onchange="onChangeHuyen(event)" id="huyen" class="form-control maxsize">
+                            <option value="">--Chọn quận/Huyện--</option>
+                        </select>
+                        <select id="xa" class="form-control maxsize">
+                            <option value="">--Chọn Phường/Xã--</option>
+                        </select>
+                    </div>
+                    <span class="form-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <input class="input" type="text" placeholder="Số nhà">
+                </div>
+                <div class="form-group">
+                    <label for="note">Lời nhắn</label>
+                    <textarea name="" id="textarea" cols="30" rows="10" placeholder="Lời nhắn"></textarea>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeModal()" class="btn red cancle">Hủy</button>
+                <button class="btn active">Xác nhận</button>
+            </div>
+        </div>
+    </div>
+    <script src="lib.js"></script>
+    <script src="cart.js"></script>
+    <script src="validator.js"></script>
+</body>
+</html>

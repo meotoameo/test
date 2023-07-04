@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>home</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="grid">
+            <div class="header-content">
+                <div class="header__icon">
+                    <img class="icon_shop" src="https://bizweb.dktcdn.net/100/401/951/themes/836238/assets/logo.png?1681532880531" alt="">
+                    
+                </div>
+                <nav class="nav">
+                    <a  class="nav__item home is-select">
+                        HOME
+                    </a>
+                    <div class="nav__item">
+                        ABOUT
+                    </div>
+                    <a href="bill.html" class="nav__item">
+                        BILLS
+                    </a>
+                    <a href="cart.html" class="nav__item cart__shopping">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <div class="notice-cart">1</div>
+                    </a>
+
+                </nav>
+            </div>
+
+        </div>
+
+    </header>
+    <div class="main">
+        <div class="grid">
+            <div class="row">
+                <div class="hot">
+                    DANH SÁCH SẢN PHẨM
+                </div>
+            </div>
+            <div class="row list__product">
+                <div class="col-3">
+                    <div class="product">
+                        <div style="background-image: url(https://cdn.tgdd.vn/Products/Images/9980/282602/giay-chay-bo-nu-adidas-ultraboost-22-w-gx5928-thumb-600x600.jpg);"
+                            class="img"></div>
+                        <div class="product-info">
+                            <div class="product__name">
+
+                            </div>
+                            <div class="product__footer">
+                                <div class="product__price"></div>
+                                <div class="quantity"></div>
+                            </div>
+                        </div>
+                        <div onclick="addSP()" class="add__sp">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="lib.js"></script>
+    <script  src="home.js"></script>
+    
+</body>
+
+</html>
